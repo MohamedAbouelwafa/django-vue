@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Django with VueJs</title>
+</head>
+<body>
+  <h1>This is the Django index page</h1>
+  <h2>The following is an embedded Vue div</h2>
+  <hr />
+  <div>
+    <a href="http://localhost:8000/">Home</a> |
+    <a href="http://localhost:8000/comp1/">Comp1</a> |
+    <a href="http://localhost:8000/comp2/">Comp2</a>
+  </div>
+  <hr />
+
+  {% block content %}
+  {% endblock %}
+  <div id="app"></div>
+
+  <script type="text/javascript" src="{% load staticfiles %}"></script>
+  <script type="text/javascript" src="{% static 'vue/dist/js/chunk-vendors.js' %}"></script>
+  <script type="text/javascript" src="{% static 'vue/dist/js/app.js' %}"></script>
+  <link href="{% static 'vue/dist/css/app.css' %}" rel=stylesheet>
+</body>
+</html>

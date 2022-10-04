@@ -1,0 +1,7 @@
+{
+  "routes" : [
+    {"path": "/", "component": "Home"},
+    {"path": "/comp1(/?.*)", "component": "Comp1"},
+    {"path": "/comp2(/?.*)", "component": "Comp2"}
+  ]
+}
