@@ -9,6 +9,12 @@
 <body>
   <h1>This is the Django index page</h1>
   <h2>The following is an embedded Vue div</h2>
+
+  {% for k in temp_data|dictsort:'date' %}
+    {{ k.date }} - {{ k.note }}<br />
+  {% endfor %}
+
+
   <hr />
   <div>
     <a href="http://localhost:8000/">Home</a> |
